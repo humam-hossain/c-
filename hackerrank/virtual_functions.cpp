@@ -9,10 +9,12 @@ class Person{
 public:
     string name;
     int age;
-    void getdata();;
-    void putdata();
+    virtual void getdata();
+    virtual void putdata();
 };
-class Professor : public Person{
+
+class Professor : public Person
+{
 public:
     int publications, cur_id =0;
 
@@ -29,9 +31,12 @@ public:
         cout << name << " "<< age << " "<< publications << " " << cur_id << endl;
     }        
 };
-class Student : public Person{
+class Student : public Person
+{
 public:
-    int marks=0, sum=0, cur_id = 0;
+    int marks=0;
+    int sum=0;
+    int cur_id = 0;
 
     // Student(){
     //     cur_id++;
