@@ -9,18 +9,19 @@ class Person{
 public:
     string name;
     int age;
-    virtual void getdata();
-    virtual void putdata();
+    virtual void getdata(){};
+    virtual void putdata(){};
 };
-
 class Professor : public Person
 {
 public:
-    int publications, cur_id =0;
+    int publications;
+    static int pr_id;
+    int cur_id = pr_id;
 
-    // Professor(){
-    //     cur_id++;
-    // }
+    Professor(){
+        pr_id++;
+    }
 
     void getdata(){
         cin >> name >> age >> publications;
@@ -34,13 +35,14 @@ public:
 class Student : public Person
 {
 public:
-    int marks=0;
+    int marks;
     int sum=0;
-    int cur_id = 0;
+    static int st_id;
+    int cur_id = st_id;
 
-    // Student(){
-    //     cur_id++;
-    // }
+    Student(){
+        st_id++;
+    }
 
     void getdata(){
         cin >> name >> age;
@@ -55,6 +57,10 @@ public:
         cout << name << " "<< age << " " << sum << " " << cur_id << endl;
     }
 };
+
+int Professor::pr_id = 1;
+int Student::st_id = 1;
+
 int main(){
     int n, val;
     cin>>n; //The number of objects that is going to be created.
