@@ -1,0 +1,1 @@
+std::invalid_argument("A is negative");

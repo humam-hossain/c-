@@ -1,33 +1,54 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <exception>
+#include <string>
+#include <stdexcept>
+#include <vector>
+#include <cmath>
 using namespace std;
 
-int main()
-{
-    int n;
-    int scores[1000];
-    int min = 0, max = 0, min_r = 0, max_r = 0;
+class Server {
+private:
+	static int load;
+public:
+	static int compute(long long A, long long B) {
+		load += 1;
+		if(A < 0) {
+			throw std::invalid_argument("A is negative");
+		}
+		vector<int> v(A, 0);
+		int real = -1, cmplx = sqrt(-1);
+		if(B == 0) throw 0;
+		real = (A/B)*real;
+		int ans = v.at(B);
+		return real + A - B*ans;
+	}
+	static int getLoad() {
+		return load;
+	}
+};
+int Server::load = 0;
 
-    cin >> n;
-    cin >> scores[0];
-    
-    max = scores[0];
-    min = scores[0];
+int main() {
+	int T; cin >> T;
+	while(T--) {
+		long long A, B;
+		cin >> A >> B;
 
-    for(int i=1; i<n; i++){
-        cin >> scores[i];
-
-        if(scores[i] > max){
-            max = scores[i];
-            max_r++;
-        }else if(scores[i] < min){
-            min = scores[i];
-            min_r++;
+		/* Enter your code here. */
+        try{
+            cout << Server::compute(A,B) << endl;
         }
-    }
+        catch(const std::bad_alloc &memmory){
+            cout << "Not enough memory" << endl;
+        }
+        catch(const std::exception &message){
+            cout << "Exception: "<< message.what() << endl;
+        }
+        catch(...){
+            cout << "Other Exception" << endl;
+        }
 
-    cout << max_r << " " << min_r;
-    
-    return 0; 
-
+	}
+	cout << Server::getLoad() << endl;
+	return 0;
 }
