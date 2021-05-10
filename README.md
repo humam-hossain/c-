@@ -478,4 +478,4 @@ friend ostream& operator<<(ostream& out, Class& C){
     return out; 
 }
 ```
-> Following is the list of operators, which can not be overloaded − __"::"__ , __".*"__ , __"."__ , __"?:"__
+> Following is the list of operators, which can not be overloaded − ' __::__ ' , ' __.*__ ' , ' __.__ ' , ' __?:__ '
