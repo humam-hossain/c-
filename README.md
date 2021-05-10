@@ -419,3 +419,60 @@ try
         cout << "Other Exception\n";
     }
 ```
+
+##friend Declaration
+The friend declaration appears in a class body and grants a function or another class access to private and protected members of the class where the friend declaration appears.
+
+##Overloading Operator & functions
+C++ allows you to specify more than one definition for a function name or an operator in the same scope, which is called function overloading and operator overloading respectively. When you call an overloaded function or operator, the compiler determines the most appropriate definition to use, by comparing the argument types you have used to call the function or operator with the parameter types specified in the definitions. The process of selecting the most appropriate overloaded function or operator is called overload resolution.
+
+###Function Overloading in C++
+You can have multiple definitions for the same function name in the same scope. The definition of the function must differ from each other by the types and/or the number of arguments in the argument list. You cannot overload function declarations that differ only by return type.
+```c++
+#include <iostream>
+using namespace std;
+ 
+class printData {
+   public:
+      void print(int i) {
+        cout << "Printing int: " << i << endl;
+      }
+      void print(double  f) {
+        cout << "Printing float: " << f << endl;
+      }
+      void print(char* c) {
+        cout << "Printing character: " << c << endl;
+      }
+};
+
+int main(void) {
+   printData pd;
+ 
+   // Call print to print integer
+   pd.print(5);
+   
+   // Call print to print float
+   pd.print(500.263);
+   
+   // Call print to print character
+   pd.print("Hello C++");
+ 
+   return 0;
+}
+```
+
+###Operators Overloading in C++
+You can redefine or overload most of the built-in operators available in C++. Thus, a programmer can use operators with user-defined types as well.
+Overloaded operators are functions with special names: the keyword "operator" followed by the symbol for the operator being defined. Like any other function, an overloaded operator has a return type and a parameter list.
+
+```c++
+[returntype] operator[symbol](arguments)
+```
+```c++
+//"<<" operator overloading
+friend ostream& operator<<(ostream& out, Class& C){
+    out << C.prop1 << " " << C.prop2 << " " << C.prop3;        
+    return out; 
+}
+```
+>Following is the list of operators, which can not be overloaded − "::" , ".*" , "." , "?:"
