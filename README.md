@@ -479,3 +479,20 @@ friend ostream& operator<<(ostream& out, Class& C){
 }
 ```
 > Following is the list of operators, which can not be overloaded − ' ___::___ ' , ' ___.*___ ' , ' ___.___ ' , ' ___?:___ '
+
+## Performance Booster
+
+***solution for problem of performance***
+```c++
+int start_up() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    return 0;
+}
+int static r = start_up();
+
+#define endl '\n';
+```
+> The static start_up fumction speeds up cout
+>  
+> `#define` changes `endl` to `'\n'`, that prevents flushing buffer for each line.
