@@ -496,3 +496,61 @@ int static r = start_up();
 > The static start_up fumction speeds up cout
 >  
 > `#define` changes `endl` to `'\n'`, that prevents flushing buffer for each line.
+
+## Class Templates
+
+***format***
+```c++
+template <class T>
+class MyTemplate {
+T element;
+public:
+MyTemplate (T arg) {element=arg;}
+T divideBy2 () {return element/2;}
+};
+```
+
+***class template specialization***
+```c++
+/ class template specialization:
+template <>
+class MyTemplate <char> {
+char element;
+public:
+MyTemplate (char arg) {element=arg;}
+char printElement ()
+{
+return element;
+}
+};
+```
+### A simple trick
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+#define concatenate add // tricky move
+
+template <typename T> class C
+{
+private:
+    T e;
+public:
+    C(T element){e = element;}
+    T add(T element){return e + element;}
+};
+int main()
+{
+    C<int> num(5);
+    C<double> fl(5.5);
+    C<string> str("Humam");
+    
+    cout << num.add(5) << endl;
+    cout << fl.add(5.5) << endl;
+    cout << str.concatenate("Hossain") << endl; 
+    return 0;
+}
+```
+instead of using add method we want to use concatenate method for str object but both method returns "element1 + element2". So one way solving this problem
+is to implement class template specialization but who wants to do that? we could just use #define to define concatenate as add .... problem solved
