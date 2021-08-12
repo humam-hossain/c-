@@ -11,8 +11,9 @@ void printPermutations(char *str, char* permutations, int last, int index){
         printPermutations (str, permutations, last, index+1);
    }
 }
+
 int main() {
-   char str[] = "+-*/";
+   char str[] = "ABC";
    cout<<"All permutations of the string with repetition of "<<str<<" are: "<<endl ;
    int len = strlen(str) ;
    char permutations[len];
