@@ -22,7 +22,7 @@ int main()
     // 24 = 4 * 6
     int i=0;
     string num_char("1346");
-    string operators("+-*/");
+    char operators[14] = {'+','-','/','*','(',')','/(','*(','-(','+(',')/',')*',')+',')-'};
     string num_perm_arr[24];
 
     // number permutations

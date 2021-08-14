@@ -18,6 +18,7 @@ int main() {
    int len = strlen(str) ;
    char permutations[len];
    printPermutations (str, permutations, len-1, 0);
+   cout << "main: " << permutations;
    return 0;
 }
 
