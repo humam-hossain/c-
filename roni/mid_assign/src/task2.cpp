@@ -7,11 +7,34 @@
 // Your given word cat has 3 character and character c 
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
 int main()
 {
-    srand(time(0));
-    cout << rand();
+    srand(time(NULL));
+
+    int c_num = 2 + rand() % 9;
+    char c = 'a' + rand() % 26;
+    char answer[100];
+    bool isTrue = false;
+
+    cout << "How many characters: " << c_num << endl;
+    cout << "Must have character: " << c << endl;
+    cout << "Write your answer: ";
+    cin >> answer;
+
+    for(int i=0; i<strlen(answer); i++){
+        if(answer[i] == c){
+            isTrue = true;
+        }
+    }
+
+    if(strlen(answer) == c_num && isTrue){
+        cout << "Your given word " << answer << " has " << c_num << " character and character " << c;
+    }else{
+        cout << "Your given word " << answer << " has not " << c_num << " character and character " << c;
+    }
+
 }
