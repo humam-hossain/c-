@@ -11,6 +11,7 @@ using namespace std;
 
 int main()
 {
+    // hello git
     double mark;
 
     cout << "Input Marks: ";
