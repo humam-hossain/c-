@@ -5,11 +5,13 @@
 
 int main ()
 {
-  char str1[]="Sample string";
-  char str2[40];
-  char str3[40];
-  strcpy (str2,str1);
-  std::cout << strcpy (str3,"copy successful");
-//   printf ("str1: %s\nstr2: %s\nstr3: %s\n",str1,str2,str3);
-  return 0;
+  int x = 3, y = 3;
+
+  switch(x+3){
+    case 6: y=1;
+    case 7: y = 2;
+    default: y+=1;
+  }
+
+  std::cout << y;
 }
