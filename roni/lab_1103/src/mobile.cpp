@@ -81,17 +81,17 @@ public:
             cout << "Recharging " << ammount << " tk ..." << endl;
             this->balance += ammount;
         }else{
-            cout << "Error: The SIM is locked" << endl;
+            cout << "Error: "<< this->sim_number <<" is locked" << endl;
         }
 
     }
 
     void call_someone(int time_duration){
         if(!this->lock_status){
-            cout << "Call duration " << time_duration << endl;
+            cout << "Call duration " << time_duration << " min" << endl;
             this->balance -= time_duration * 0.5;
         }else{
-            cout << "Error: The SIM is locked" << endl;
+            cout << "Error: "<< this->sim_number <<" is locked" << endl;
         }
     }
 
