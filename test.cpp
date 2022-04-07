@@ -1,17 +1,45 @@
-/* strcpy example */
-// #include <stdio.h>
 #include <iostream>
-#include <string.h>
+#include <vector>
 
-int main ()
+#include <map>
+#include <unordered_map>
+
+using namespace std;
+
+struct CityRecord
 {
-  int x = 3, y = 3;
+    string name;
+    uint64_t population;
+    double latitude, longtitude;
+};
 
-  switch(x+3){
-    case 6: y=1;
-    case 7: y = 2;
-    default: y+=1;
-  }
+int main()
+{
+    vector<CityRecord> cities;
 
-  std::cout << y;
+    cities.push_back({"Dhaka", 500000, 23.81, 90.41});
+    cities.push_back({"Malbourne", 500000, 23.81, 90.41});
+    cities.push_back({"Delhi", 500000, 23.81, 90.41});
+    cities.push_back({"Karachi", 500000, 23.81, 90.41});
+    cities.push_back({"Berlin", 700000, 23.81, 90.41});
+    cities.push_back({"London", 500000, 23.81, 90.41});
+
+    // for(const auto& city:cities){
+    //     cout << city.name << endl;
+    // }
+    
+    map<string, CityRecord> cityMap;
+
+    cityMap["Dhaka"] = CityRecord {"Dhaka", 500000, 23.81, 90.41};
+    cityMap["Malbourne"] = CityRecord {"Malbourne", 500000, 23.81, 90.41};
+    cityMap["Delhi"] = CityRecord {"Delhi", 500000, 23.81, 90.41};
+    cityMap["Karachi"] = CityRecord {"Karachi", 500000, 23.81, 90.41};
+    cityMap["Berlin"] = CityRecord {"Berlin", 700000, 23.81, 90.41};
+    cityMap["London"] = CityRecord {"London", 500000, 23.81, 90.41};
+
+    // cout << cityMap["Berlin"].population;
+
+    // for(const auto& city : cityMap){
+    //     cout << city.first << endl;
+    // }
 }
