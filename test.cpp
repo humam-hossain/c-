@@ -1,45 +1,14 @@
 #include <iostream>
-#include <vector>
-
-#include <map>
-#include <unordered_map>
+#include <string.h>
 
 using namespace std;
 
-struct CityRecord
-{
-    string name;
-    uint64_t population;
-    double latitude, longtitude;
-};
-
 int main()
 {
-    vector<CityRecord> cities;
+    char* buffer = new char[8];
+    memset(buffer, 0, 8);
 
-    cities.push_back({"Dhaka", 500000, 23.81, 90.41});
-    cities.push_back({"Malbourne", 500000, 23.81, 90.41});
-    cities.push_back({"Delhi", 500000, 23.81, 90.41});
-    cities.push_back({"Karachi", 500000, 23.81, 90.41});
-    cities.push_back({"Berlin", 700000, 23.81, 90.41});
-    cities.push_back({"London", 500000, 23.81, 90.41});
-
-    // for(const auto& city:cities){
-    //     cout << city.name << endl;
-    // }
+    cout << "Hello World";
     
-    map<string, CityRecord> cityMap;
-
-    cityMap["Dhaka"] = CityRecord {"Dhaka", 500000, 23.81, 90.41};
-    cityMap["Malbourne"] = CityRecord {"Malbourne", 500000, 23.81, 90.41};
-    cityMap["Delhi"] = CityRecord {"Delhi", 500000, 23.81, 90.41};
-    cityMap["Karachi"] = CityRecord {"Karachi", 500000, 23.81, 90.41};
-    cityMap["Berlin"] = CityRecord {"Berlin", 700000, 23.81, 90.41};
-    cityMap["London"] = CityRecord {"London", 500000, 23.81, 90.41};
-
-    // cout << cityMap["Berlin"].population;
-
-    // for(const auto& city : cityMap){
-    //     cout << city.first << endl;
-    // }
+    return 0;
 }
