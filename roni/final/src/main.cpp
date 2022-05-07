@@ -121,13 +121,13 @@ public:
         cout << "Employee ID: " << this->employeeID << "\nEmployee Name: " << this->employeeName << "\nSalary: " << this->salary << "\nTerritory Name: " << this->territoryName << endl;
     }
 
-    void incrementSalary(Salesman salesman, double amount)
+    void incrementSalary(Salesman* salesman, double amount)
     {
-        if(salesman.getManagerID() == this->employeeID){
-            double newSalary = salesman.getSalary() + amount;
+        if(salesman->getManagerID() == this->employeeID){
+            double newSalary = salesman->getSalary() + amount;
             // cout << newSalary << endl;
 
-            salesman.setSalary(newSalary);
+            salesman->setSalary(newSalary);
         }
     }
 };
@@ -145,7 +145,7 @@ int main()
 
     cout << endl;
 
-    manager.incrementSalary(salesman, 1000);
+    manager.incrementSalary(&salesman, 1000);
     salesman.showDetails();
 
     return 0;
