@@ -1,13 +1,6 @@
 #include <iostream>
-#include <string.h>
-
-class Entity
-{
-    public:
-        
-};
 
 int main()
 {
-    
+    std::cout << "Hello";
 }
