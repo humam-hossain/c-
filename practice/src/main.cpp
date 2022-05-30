@@ -1,11 +1,39 @@
 #include <iostream>
+#include <string>
 
-int main()
+class Person
 {
-    const int MAX_AGE = 90;
+private:
+    int m_x;
+public:
+    Person(){
+        std::cout << "Person is created!" << std::endl;
+    }
 
-    MAX_AGE = 3;
+    Person(const int& x)
+        : m_x(x)
+    {
+        std::cout << "Person is created with " << x << " !" << std::endl;
+    }
+};
 
-    std::cin.get();
+class Entity
+{
+private:
+    std::string m_name;
+    Person p;
+public:
+    Entity()
+        : m_name("Unknown"), p(0)
+    {}
+
+    Entity(const std::string& name)
+        : m_name(name)
+    {}
+};
+
+int main(){
+    Entity e;
+
     return 0;
 }
