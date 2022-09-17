@@ -1,4 +1,3 @@
-// write a c program to check whether a student has passed(40%) or failed from a given mark.
 #include<stdio.h>
 
 int main()
@@ -13,6 +12,6 @@ int main()
 	}else{
 		printf("failed");
 	}
-	
+
 	return 0;
 }

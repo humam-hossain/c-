@@ -1,4 +1,3 @@
-// 4. write a c program to find the largest between two numbers
 #include<stdio.h>
 
 int main()
@@ -13,6 +12,6 @@ int main()
 	}else{
 		printf("%d", b);
 	}
-	
+
 	return 0;
 }

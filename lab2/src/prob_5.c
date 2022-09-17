@@ -1,4 +1,3 @@
-// 5. write a c program to find the smallest among the three numbers.
 #include<stdio.h>
 
 int main()
@@ -7,7 +6,7 @@ int main()
 
 	printf("Input 3 numbers: ");
 	scanf("%d %d %d", &a, &b, &c);
-	
+
 	min = a;
 
 	if(b < min){

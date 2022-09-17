@@ -1,5 +1,3 @@
-// write a c program to check whether a number is positive or
-// negative or equal to zero
 #include<stdio.h>
 
 int main()
@@ -17,6 +15,6 @@ int main()
 	}else{
 		printf("zero");
 	}
-	
+
 	return 0;
 }

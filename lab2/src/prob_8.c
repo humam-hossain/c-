@@ -1,5 +1,3 @@
-// 8. write a c program to calculate the grade points of a student for a particular subject from the given mark using the
-
 #include<stdio.h>
 
 int main()

@@ -1,4 +1,3 @@
-// 14. write a c program to implement a calculator (+,-,*,/,%) using switch
 #include<stdio.h>
 
 int main()
@@ -12,23 +11,17 @@ int main()
 	switch (operator)
 	{
 	case '+':
-		printf("= %d", a + b);
-		break;
+		printf("= %d", a + b); break;
 	case '-':
-		printf("= %d", a - b);
-		break;
+		printf("= %d", a - b); break;
 	case '*':
-		printf("= %d", a * b);
-		break;
+		printf("= %d", a * b); break;
 	case '/':
-		printf("= %lf", a / (double)b);
-		break;
+		printf("= %lf", a / (double)b); break;
 	case '%':
-		printf("= %d", a%b);
-		break;
+		printf("= %d", a%b); break;
 	default:
-		printf("Invalid input");
-		break;
+		printf("Invalid input"); break;
 	}
 
 	return 0;
