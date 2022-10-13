@@ -1,25 +1,34 @@
 #include<stdio.h>
-
 int main()
 {
-	int a, b;
-	char operator;
+	double a, b;
+	char op;
 
 	printf("======= Calculator =======\n");
-	scanf("%d %c %d", &a, &operator, &b);
+	scanf("%lf %c %lf", &a, &op, &b);
 
-	switch (operator)
+	switch (op)
 	{
 	case '+':
-		printf("= %d", a + b); break;
+		printf("= %lf", a + b); break;
 	case '-':
-		printf("= %d", a - b); break;
+		printf("= %lf", a - b); break;
 	case '*':
-		printf("= %d", a * b); break;
+		printf("= %lf", a * b); break;
 	case '/':
-		printf("= %lf", a / (double)b); break;
+	    if(b != 0){
+            printf("= %lf", a/b);
+	    }else{
+            printf("Invalid input");
+	    }
+		break;
 	case '%':
-		printf("= %d", a%b); break;
+	    if(b != 0){
+            printf("= %lf", (int)a%(int)b);
+	    }else{
+            printf("Invalid input");
+	    }
+	    break;
 	default:
 		printf("Invalid input"); break;
 	}
