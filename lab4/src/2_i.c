@@ -1,17 +1,19 @@
+// 1+2+4+5+7+8....
+
 #include<stdio.h>
 
 int main()
 {
-    int i, j=1, n, sum = 0;
+    int i, num=1, n, sum = 0;
 
     scanf("%d", &n);
 
     for(i=1; i<=n; i++){
-        if(j%3 == 0){
-            j++;
+        if(num%3 == 0){
+            num++;
         }
-        sum += j;
-        j++;
+        sum += num;
+        num++;
     }
 
     printf("%d", sum);
