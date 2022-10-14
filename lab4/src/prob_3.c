@@ -1,6 +1,3 @@
-// fibonacci series
-// 0+1+1+2+3+5+8+.....+Nth term
-
 #include<stdio.h>
 
 int main()
@@ -16,7 +13,7 @@ int main()
         s = temp;
     }
 
-    printf("= %d", sum);
+    printf("%d", sum);
 
     return 0;
 }
