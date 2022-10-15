@@ -6,7 +6,7 @@ int main()
     int num = 60;
 
     for(i=num; i>0; i-=3){
-        sum += num;
+        sum += i;
     }
 
     printf("%d", sum);
