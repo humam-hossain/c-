@@ -1,23 +1,31 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
+
+#define array1_size 100000
+#define array2_size 50000
+#define array3_size 10000
+#define array4_size 500
+
+
 using namespace std;
 
-bool binarySearch(int *p, int low, int high, int V)
-{
-    int mid;
-    while (low <= high)
-    {
-        mid = (low + high) / 2;
-        if (*(p + mid) == V)
-            return true;
-        else if (*(p + mid) < V) // now, you explore the right subarray w.r.t mid point
-            low = mid + 1;
-        else
-            high = mid - 1; // exploring the left subarray w.r.t. mid point
-    }
-    return false; // V has not been found
-}
+// bool binarySearch(int *p, int low, int high, int V)
+// {
+//     int mid;
+//     while (low <= high)
+//     {
+//         mid = (low + high) / 2;
+//         if (*(p + mid) == V)
+//             return true;
+//         else if (*(p + mid) < V) // now, you explore the right subarray w.r.t mid point
+//             low = mid + 1;
+//         else
+//             high = mid - 1; // exploring the left subarray w.r.t. mid point
+//     }
+//     return false; // V has not been found
+// }
 
 void bubbleSort(int *p, int n)
 {
@@ -35,78 +43,81 @@ void bubbleSort(int *p, int n)
     }
 }
 
-void print(int *p, int n)
+string print(int *p, int n)
 {
-    for (int i = 0; i < n; i++)
-        cout << *(p + i) << " ";
-    cout << endl;
+    string result = "";
+    for (int i = 0; i < n; i++){
+        result += to_string(*(p + i)) + "\t";
+
+        if((i+1)%20 == 0)
+            result += "\n";
+    }
+
+    return result;
+}
+
+string check(int *array, int n)
+{
+    string result = "";
+
+    time_t start, end;
+    time(&start);
+    ios_base::sync_with_stdio(false);
+
+    bubbleSort(array, n);
+    
+    time(&end);
+
+    result += "Time taken => " + to_string(double(end - start)) + " sec \n\n\n";
+    result += print(array, n);
+
+    return result;
 }
 
 int main()
 {
-
-    int array[100000], array2[5000], array3[2000], array4[1000];
     srand(static_cast<unsigned int>(time(nullptr)));
 
-    for (int i = 0; i < 100000; i++)
+    int array1[array1_size], array2[array2_size], array3[array3_size], array4[array4_size];
+
+    for (int i = 0; i < array1_size; i++)
     {
-        array[i] = rand();
+        array1[i] = rand();
     }
-    for (int i = 0; i < 5000; i++)
+    for (int i = 0; i < array2_size; i++)
     {
         array2[i] = rand();
     }
-    for (int i = 0; i < 2000; i++)
+    for (int i = 0; i < array3_size; i++)
     {
         array3[i] = rand();
     }
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < array4_size; i++)
     {
         array4[i] = rand();
     }
 
-    int n = sizeof(array) / sizeof(array[0]);
-    bubbleSort(array, n);
-    // print(array, n);
+    int n;
 
-    int V = -100; // value you are looking for
-
-    bool found = binarySearch(array, 0, n - 1, V);
-
-    cout << endl
-         << found << endl;
+    n = sizeof(array1) / sizeof(array1[0]);
+    ofstream file1("array1_bubbleSorted.txt");
+    file1 << check(array1, n);
+    file1.close();
 
     n = sizeof(array2) / sizeof(array2[0]);
-    bubbleSort(array2, n);
-    // print(array2, n);
-
-    V = -100; // value you are looking for
-
-    found = binarySearch(array2, 0, n - 1, V);
-
-    cout << endl
-         << found << endl;
-
+    ofstream file2("array2_bubbleSorted.txt");
+    file2 << check(array2, n);
+    file2.close();
+    
     n = sizeof(array3) / sizeof(array3[0]);
-    bubbleSort(array3, n);
-    // print(array3, n);
-
-    V = -100; // value you are looking for
-
-    found = binarySearch(array3, 0, n - 1, V);
-
-    cout << endl
-         << found << endl;
+    ofstream file3("array3_bubbleSorted.txt");
+    file3 << check(array3, n);
+    file3.close();
 
     n = sizeof(array4) / sizeof(array4[0]);
-    bubbleSort(array4, n);
-    // print(array4, n);
-
-    V = -100; // value you are looking for
-
-    found = binarySearch(array4, 0, n - 1, V);
-
-    cout << endl << found << endl;
+    ofstream file4("array4_bubbleSorted.txt");
+    file4 << check(array4, n);
+    file4.close();
 
     return 0;
 }
