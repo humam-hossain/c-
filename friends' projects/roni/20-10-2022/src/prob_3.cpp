@@ -85,16 +85,22 @@ void Queue::frontElement()
 
 void Queue::show()
 {
-    if(this->isEmpty()){
+    if (this->isEmpty())
+    {
         std::cout << "Queue is empty!" << std::endl;
-    }else{
-        std::cout << std::endl << "font = " << this->front << std::endl;
+    }
+    else
+    {
+        std::cout << std::endl
+                  << "font = " << this->front << std::endl;
         std::cout << "Queue elements: ";
 
-        for(int i=front; i<=rear; i++){
+        for (int i = front; i <= rear; i++)
+        {
             std::cout << this->queue[i] << "\t";
         }
-        std::cout << std::endl << "rear = " << this->rear << std::endl;
+        std::cout << std::endl
+                  << "rear = " << this->rear << std::endl;
     }
 }
 
