@@ -47,15 +47,19 @@ string check(int *array, int n)
 {
     string result = "";
 
-    time_t start, end;
-    time(&start);
-    ios_base::sync_with_stdio(false);
+    clock_t start, end;
+    // time(&start);
+    start = clock();
+    // ios_base::sync_with_stdio(false);
 
     insertionSort(array, n);
 
-    time(&end);
+    // time(&end);
+    end = clock();
+    double time_taken = double(end - start) / double(CLOCKS_PER_SEC);
+    cout << "Time taken => " << time_taken << " sec" << endl;
 
-    result += "Time taken => " + to_string(double(end - start)) + " sec \n\n\n";
+    result += "Time taken => " + to_string(time_taken) + " sec \n\n\n";
     result += print(array, n);
 
     return result;
