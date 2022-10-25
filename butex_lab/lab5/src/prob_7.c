@@ -6,29 +6,23 @@ int main()
 
     scanf("%d %d", &start, &end);
 
-    for (j = start; j <= end; j++)
-    {
+    for (j = start; j <= end; j++){
         flag = 1;
 
-        if (j != 1 && j != 2 && j % 2 == 0)
-        {
+        if (j != 1 && j != 2 && j % 2 == 0){
             flag = 0;
         }
-        else
-        {
-            for (i = 3; i < j; i += 2)
-            {
-                if (j % i == 0)
-                {
+        else{
+            for (i = 3; i < j; i += 2){
+                if (j % i == 0){
                     flag = 0;
                     break;
                 }
             }
         }
 
-        if (flag == 1)
-        {
-            printf("%d ", j);
+        if (flag == 1){
+            printf("%d\t", j);
         }
     }
 

@@ -4,13 +4,19 @@
 
 int main()
 {
-	int temp, num, check_num=0;
+	int temp, num, check_num=0, digits=0;
 
 	scanf("%d", &num);
 	temp = num;
 
+	while(temp!=0){
+        temp = temp / 10;
+        digits++;
+    }
+
+	temp = num;
 	while(temp != 0){
-		check_num += pow((temp%10),3);
+		check_num += pow((temp%10), digits);
 		temp /= 10;
 	}
 

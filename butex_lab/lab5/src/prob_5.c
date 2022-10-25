@@ -4,7 +4,7 @@ int main()
 {
     int num1, num2, min, max, r, temp;
 
-    scanf("%d %d", &num1, &num2);
+    scanf("%d %d",  &num1, &num2);
 
     // GCD Calculation
     max = num1>num2 ? num1 : num2;

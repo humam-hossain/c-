@@ -6,7 +6,7 @@ int main()
 
     scanf("%d", &num);
 
-    if(num!=2 && num%2==0){
+    if(num==1 || (num!=2 && num%2==0)){
         flag=0;
     }else{
         for(i=3; i<num; i+=2){
