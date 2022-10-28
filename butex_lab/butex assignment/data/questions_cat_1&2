@@ -1,0 +1,34 @@
+Write a C program to print all natural numbers from 1 to n.
+Write a C program to print all natural numbers in reverse (from n to 1)
+Write a C program to print all alphabets from a to z.
+Write a C program to print all even numbers between 1 to 100.
+Write a C program to print all odd number between 1 to 100.
+Write a C program to find sum of all even numbers between 1 to n
+Write a C program to find sum of all odd numbers between 1 to n
+Write a C program to print multiplication table of any number
+Write a C program to find first and last digit of a number
+Write a C program to find sum of first and last digit of a number.
+Write a C program to swap first and last digits of a number
+Write a C program to calculate product of digits of a number
+Write a C program to enter a number and print it in words.
+Write a program in C to display n terms of natural numbers and their sum.
+Write a program in C to read 10 numbers from keyboard and find their sum and average.
+Write a program in C to display the cube of the number upto given an integer.
+Write a program in C to display the multiplication table of a given integer.
+Write a program in C to display the multiplication table vertically from 1 to n.
+Write a program in C to print the Floyd's Triangle.
+Write a c program to find the perfect numbers within a given number of range.
+Write a program in C to display the pattern like a diamond.
+Write a C program to display Pascal's triangle.
+Write a program in C to display such a pattern for n number of rows using a number which will start with the number 1 and the first and a last number of each row will be 1.
+Write a program in C to find the number and sum of all integer between 100 and 200 which are divisible by 9.
+Write a program in C to convert a binary number into a decimal number without using array, function and while loop.
+Write a program in C to convert a binary number into a decimal number using math function.
+Write a c program to find out the sum of an A.P. series.
+Write a program in c to find the Sum of GP series.
+Write a program in C to Check Whether a Number can be Express as Sum of Two Prime Numbers.
+Write a program in C to print a string in reverse order.
+Write a C program to find the length of a string without using the library function.
+Write a program in C to convert a decimal number to hexadecimal.
+Write a program in C to convert an octal number into binary.
+Write a program in C to convert a binary number to octal.

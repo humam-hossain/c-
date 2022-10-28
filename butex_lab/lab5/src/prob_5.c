@@ -2,30 +2,27 @@
 
 int main()
 {
-    int num1, num2, min, max, r, temp;
+    int i, num1, num2, lcm, gcd;
 
     scanf("%d %d",  &num1, &num2);
 
     // GCD Calculation
-    max = num1>num2 ? num1 : num2;
-    min = num1<num2 ? num1 : num2;
-
-    while(r != 0){
-        r = max%min;
-        max = min;
-        min = r;
+    for(i=1; i<=num1 && i<=num2; i++){
+        if(num1%i == 0 && num2%i == 0){
+            gcd = i;
+        }
     }
-    printf("GCD of %d and %d is %d\n", num1, num2, max);
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd);
 
     // LCM Calculation
-    max = num1>num2 ? num1 : num2;
+    lcm = num1>num2 ? num1 : num2;
 
     while(1){
-        if(max%num1 == 0 && max%num2 == 0){
-            printf("LCM of %d and %d is %d", num1, num2, max);
+        if(lcm%num1 == 0 && lcm%num2 == 0){
+            printf("LCM of %d and %d is %d", num1, num2, lcm);
             break;
         }
-        max++;
+        lcm++;
     }
 
     return 0;
