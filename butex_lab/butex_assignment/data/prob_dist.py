@@ -51,7 +51,7 @@ cat_3_comb = category_combinations(cat_3, 6)
 
 cat_1_comb = cat_final_comb(cat_1_comb, total_student)
 cat_2_comb = cat_final_comb(cat_2_comb, total_student)
-cat_3_comb = cat_final_comb(cat_3_comb, total_student)
+cat_3_comb = cat_final_comb(cat_3_comb, total_student) 
 
 # print(len(cat_1_comb))
 # print(len(cat_2_comb))
@@ -67,7 +67,8 @@ questions = file.readlines()
 file = open("problem_set.txt", "w")
 
 for i in range(total_student):
-    set = cat_1_comb[i] + cat_2_comb[i] + cat_3_comb[i]
+    # set = cat_1_comb[i] + cat_2_comb[i] + cat_3_comb[i]
+    set = cat_1_comb[i] + cat_2_comb[i] + (35, 41, 45, 43, 46, 47)
     std_dict[rolls[i]] = set
     file.write(rolls[i][:-1] + " =>" + str(set) + "\n\n");
 
