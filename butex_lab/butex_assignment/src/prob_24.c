@@ -4,6 +4,9 @@
 
 int main()
 {
+	int i, num, sum=0;
+
+	for(i=0; i<)
 
 	return 0;
 }

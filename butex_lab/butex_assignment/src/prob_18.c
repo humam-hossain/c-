@@ -4,6 +4,16 @@
 
 int main()
 {
+	int i, j, num;
+
+	scanf("%d", &num);
+
+	for(i=1; i<=10; i++){
+		for(j=1; j<=num; j++){
+			printf("%d X %d = %d\t", j, i, j*i);
+		}
+		printf("\n");
+	}
 
 	return 0;
 }
