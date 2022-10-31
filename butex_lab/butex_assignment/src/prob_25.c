@@ -2,16 +2,15 @@
 /*
 111000011
 = 1 * 2^0 + 1 * 2^1
-decimal = digit * 10^i + 
+decimal = digit * 2^i + 
 
 */
 
 #include<stdio.h>
-#include <math.h>
 
 int main()
 {
-	int bin, digit, decimal, temp, i, n;
+	int bin, digit, power, decimal, temp, i, n;
 
 	scanf("%d", &bin);
 
@@ -20,7 +19,13 @@ int main()
 	n=0;
 	while(temp != 0){
 		digit = temp % 10;
-		decimal += digit * pow(2, n);
+		power = 1;
+
+		for(i=0; i<n; i++){
+			power *= 2;
+		}
+
+		decimal += digit * power;
 
 		n++;
 		temp /= 10;
