@@ -4,9 +4,17 @@
 
 int main()
 {
-	int i, num, sum=0;
+	int i, sum=0;
 
-	for(i=0; i<)
+	for(i=100; i<=200; i++){
+		if(i%9 == 0){
+			printf("%d + ", i);
+			
+			sum += i;
+		}
+	}
+
+	printf("= %d", sum);
 
 	return 0;
 }
