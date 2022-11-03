@@ -8,7 +8,6 @@ range = a - b
 */
 
 #include<stdio.h>
-#include<math.h>
 
 int main()
 {
