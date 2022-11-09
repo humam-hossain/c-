@@ -1,39 +1,12 @@
-#include <iostream>
-#include <string>
+#include<iostream>
+#include "practice.h"
 
-class Person
+int main()
 {
-private:
-    int m_x;
-public:
-    Person(){
-        std::cout << "Person is created!" << std::endl;
-    }
+    char name[100];
 
-    Person(const int& x)
-        : m_x(x)
-    {
-        std::cout << "Person is created with " << x << " !" << std::endl;
-    }
-};
-
-class Entity
-{
-private:
-    std::string m_name;
-    Person p;
-public:
-    Entity()
-        : m_name("Unknown"), p(0)
-    {}
-
-    Entity(const std::string& name)
-        : m_name(name)
-    {}
-};
-
-int main(){
-    Entity e;
+    std::cin >> name;
+    say_hello(name);
 
     return 0;
 }
