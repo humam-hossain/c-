@@ -1,4 +1,5 @@
-// 4. write a c program to count the frequency of a number.
+
+
 #include<stdio.h>
 
 int main()

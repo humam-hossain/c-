@@ -1,6 +1,6 @@
 // 2. write a c program to find both values and indexes of maximum and minimum elements of an array
-#include<stdio.h>
 
+#include<stdio.h>
 int main()
 {
 	int i, size;
@@ -12,7 +12,6 @@ int main()
 	for(i=0; i<size; i++){
 		scanf("%lf", &arr[i]);
 	}
-
 	max = arr[0];
 	max_i = 0;
 	min = arr[0];
@@ -23,15 +22,11 @@ int main()
 			max = arr[i];
 			max_i = i;
 		}
-
 		if(arr[i] < min){
 			min = arr[i];
 			min_i = i;
 		}
 	}
-
-	printf("MAX: arr[%d] = %lf\n", max_i, max);
-	printf("MIN: arr[%d] = %lf\n", min_i, min);
-
+	printf("MAX: arr[%d] = %lf\nMIN: arr[%d] = %lf\n", max_i, max, min_i, min);
 	return 0;
 }

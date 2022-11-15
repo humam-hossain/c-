@@ -1,6 +1,5 @@
-// write a c program to sort an array
-#include<stdio.h>
 
+#include<stdio.h>
 int main()
 {
 	int size;
@@ -12,7 +11,6 @@ int main()
 	for(i=0; i<size; i++){
 		scanf("%lf", &arr[i]);
 	}
-
 	for(i=0; i<size; i++){
 		for(j=1; j<size-i; j++){
 			if(arr[j-1] > arr[j] ){
@@ -22,7 +20,6 @@ int main()
 			}
 		}
 	}
-
 	for(i=0; i<size; i++){
 		printf("%lf ", arr[i]);
 	}

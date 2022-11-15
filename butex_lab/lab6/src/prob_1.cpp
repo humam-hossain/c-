@@ -1,4 +1,5 @@
 // 1. write a c program to calculate sum and average of an array
+
 #include<stdio.h>
 
 int main()

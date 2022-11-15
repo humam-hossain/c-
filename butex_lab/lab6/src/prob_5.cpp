@@ -1,4 +1,4 @@
-// write a c program to copy an array to another array
+
 #include<stdio.h>
 
 int main()
