@@ -1,0 +1,4 @@
+Write a c program to transpose a matrix, i.e., A’. Given, A = {{1, 2}, {2, 4}}.
+Write a c program to add two matrices. If A and B are two matrices, the sum of these matrices, C = A + B.
+Write a c program to subtract two matrices. If A and B are two matrices, the difference of these matrices, C = A - B.
+Write a c program to multiply two matrices. If A and B are two matrices, the product of these matrices, C = A * B. Given, A={{1, 2}, {1, 2}} and B = {{2, 1}, {2, 1}}.
