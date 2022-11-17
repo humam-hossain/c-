@@ -1,0 +1,9 @@
+Write a c function that takes two numbers as parameters and returns the sum of them. 
+Write a c function that takes a year as a parameter and returns 1 if it is a leap year, otherwise, it returns 0. It will return 1 for 2000 and 0 for 2100.
+Write a c function that takes mark of a subject as parameter and returns obtained grade using the following table:\n90% and above     4.0\n80% to below 90%  3.5\n70% to below 80%  3.0\n60% to below 70%  2.5\n50% to below 60%  2.0\nBelow 50%         0.0
+Write a c function that takes a number as a parameter and returns 1 if it is prime, otherwise, it returns 0. It prints 1 for 23 and 0 for 22.
+Write a c function that takes an array as a parameter and returns the average of that array. 
+Write a c function to check whether a string is a palindrome or not. It returns 1 if given string is a palindrome, otherwise, it returns 0. A string is called palindrome if the reverse of the string is the same as the original string, i.e., madam. You can use library functions. 
+Write a c function to calculate the factorial of a number using recursion. 
+Write a c function to calculate the sum of the multiples of 7 within 1 to 100, i.e., 7+14+21+...+98, using recursion. It will print 735.
+Write a c function to swap two numbers using pointer. 
