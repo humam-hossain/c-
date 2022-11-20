@@ -36,10 +36,10 @@ int main()
         count[arr[i]-min]++;
     }
 
-    int j;
+    int j, k;
 
     for(i=0, j=0; i<max-min+1; i++){
-        if(count[i] != 0){
+        for(k=0; k<count[i]; k++){
             arr[j] = i+min;
             j++;
         }
