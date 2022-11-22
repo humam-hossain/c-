@@ -1,4 +1,5 @@
-//  Write a c program to subtract two matrices. If A and B are two matrices, the difference of these matrices, C = A - B.
+//  Write a c program to subtract two matrices. If A and B are two matrices, 
+// the difference of these matrices, C = A - B.
 #include<stdio.h>
 
 int main()

@@ -1,4 +1,5 @@
-//  Write a c program to add two matrices. If A and B are two matrices, the sum of these matrices, C = A + B.
+//  Write a c program to add two matrices. 
+// If A and B are two matrices, the sum of these matrices, C = A + B.
 #include<stdio.h>
 
 int main()

@@ -1,4 +1,5 @@
-//  Write a c program to multiply two matrices. If A and B are two matrices, the product of these matrices, C = A * B. Given, A={{1, 2}, {1, 2}} and B = {{2, 1}, {2, 1}}.
+//  Write a c program to multiply two matrices. If A and B are two matrices, 
+// the product of these matrices, C = A * B. Given, A={{1, 2}, {1, 2}} and B = {{2, 1}, {2, 1}}.
 #include<stdio.h>
 
 int main()
