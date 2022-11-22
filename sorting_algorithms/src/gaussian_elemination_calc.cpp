@@ -14,26 +14,48 @@ int main()
         }
     }
 
+    int p, q;
     printf("=>\n");
-    for(i=0; i<n; i++){
-        for(j=0; j<n+1; j++){
-            printf("%g\t", matrix[i][j]);
+    for(p=0; p<n; p++){
+        for(q=0; q<n+1; q++){
+            printf("%f\t", matrix[p][q]);
         }
         printf("\n");
     }
 
-    float temp = matrix[0][0];
-    for(i=0; i<n+1; i++){
-        matrix[0][i] = matrix[0][i] / temp;
-    }
+    int k;
 
-    printf("=>\n");
-    for(i=0; i<n; i++){
-        for(j=0; j<n+1; j++){
-            printf("%g\t", matrix[i][j]);
+    for(k=0; k<n; k++){
+        float temp = matrix[k][k];
+        for(i=0; i<n+1; i++){
+            matrix[k][i] = matrix[k][i] / temp;
         }
-        printf("\n");
-    }
+
+        printf("=>\n");
+        for(p=0; p<n; p++){
+            for(q=0; q<n+1; q++){
+                printf("%f\t", matrix[p][q]);
+            }
+            printf("\n");
+        }
+
+        for(i=0; i<n; i++){
+            if(i != k){
+                temp = matrix[i][k];
+                for(j=0; j<n+1; j++){
+                    matrix[i][j] = matrix[i][j] - matrix[k][j] * temp;
+                }
+                printf("=>\n");
+                for(p=0; p<n; p++){
+                    for(q=0; q<n+1; q++){
+                        printf("%f\t", matrix[p][q]);
+                    }
+                    printf("\n");
+                }
+            }
+                
+        }
+    }    
 
     return 0;
 }
