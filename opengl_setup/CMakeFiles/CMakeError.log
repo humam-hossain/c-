@@ -1,0 +1,112 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-5jltc6
+
+Run Build Command(s):C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f Makefile cmTC_37e57/fast && C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_37e57.dir\build.make CMakeFiles/cmTC_37e57.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-5jltc6'
+Building C object CMakeFiles/cmTC_37e57.dir/src.c.obj
+C:\MinGW\bin\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_37e57.dir\src.c.obj -c F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-5jltc6\src.c
+F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-5jltc6\src.c:1:21: fatal error: pthread.h: No such file or directory
+ #include <pthread.h>
+                     ^
+compilation terminated.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_37e57.dir\build.make:77: CMakeFiles/cmTC_37e57.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-5jltc6'
+mingw32-make.exe: *** [Makefile:126: cmTC_37e57/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-x0kxfy
+
+Run Build Command(s):C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f Makefile cmTC_fa9f6/fast && C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_fa9f6.dir\build.make CMakeFiles/cmTC_fa9f6.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-x0kxfy'
+Building C object CMakeFiles/cmTC_fa9f6.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\cmTC_fa9f6.dir\CheckFunctionExists.c.obj -c F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-x0kxfy\CheckFunctionExists.c
+Linking C executable cmTC_fa9f6.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_fa9f6.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_fa9f6.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\cmTC_fa9f6.dir/objects.a @CMakeFiles\cmTC_fa9f6.dir\objects1
+C:\MinGW\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\cmTC_fa9f6.dir/objects.a -Wl,--no-whole-archive -o cmTC_fa9f6.exe -Wl,--out-implib,libcmTC_fa9f6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_fa9f6.dir\linkLibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot find -lpthreads
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_fa9f6.dir\build.make:100: cmTC_fa9f6.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-x0kxfy'
+mingw32-make.exe: *** [Makefile:126: cmTC_fa9f6/fast] Error 2
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-nydyct
+
+Run Build Command(s):C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f Makefile cmTC_0b7f1/fast && C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_0b7f1.dir\build.make CMakeFiles/cmTC_0b7f1.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-nydyct'
+Building C object CMakeFiles/cmTC_0b7f1.dir/CheckFunctionExists.c.obj
+C:\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles\cmTC_0b7f1.dir\CheckFunctionExists.c.obj -c F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-nydyct\CheckFunctionExists.c
+Linking C executable cmTC_0b7f1.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_0b7f1.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_0b7f1.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\cmTC_0b7f1.dir/objects.a @CMakeFiles\cmTC_0b7f1.dir\objects1
+C:\MinGW\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles\cmTC_0b7f1.dir/objects.a -Wl,--no-whole-archive -o cmTC_0b7f1.exe -Wl,--out-implib,libcmTC_0b7f1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_0b7f1.dir\linkLibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot find -lpthread
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_0b7f1.dir\build.make:100: cmTC_0b7f1.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-nydyct'
+mingw32-make.exe: *** [Makefile:126: cmTC_0b7f1/fast] Error 2
+
+
+
+Determining if the include file dinput.h exists failed with the following output:
+Change Dir: F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-az6be3
+
+Run Build Command(s):C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f Makefile cmTC_86aa9/fast && C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_86aa9.dir\build.make CMakeFiles/cmTC_86aa9.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-az6be3'
+Building C object CMakeFiles/cmTC_86aa9.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_86aa9.dir\CheckIncludeFile.c.obj -c F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-az6be3\CheckIncludeFile.c
+F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-az6be3\CheckIncludeFile.c:1:20: fatal error: dinput.h: No such file or directory
+ #include <dinput.h>
+                    ^
+compilation terminated.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_86aa9.dir\build.make:77: CMakeFiles/cmTC_86aa9.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-az6be3'
+mingw32-make.exe: *** [Makefile:126: cmTC_86aa9/fast] Error 2
+
+
+
+Determining if the include file xinput.h exists failed with the following output:
+Change Dir: F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-4s9w8e
+
+Run Build Command(s):C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f Makefile cmTC_c28d0/fast && C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_c28d0.dir\build.make CMakeFiles/cmTC_c28d0.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-4s9w8e'
+Building C object CMakeFiles/cmTC_c28d0.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_c28d0.dir\CheckIncludeFile.c.obj -c F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-4s9w8e\CheckIncludeFile.c
+F:\Programming\github_repo\cpp\gaussian_elemenination_calculator\CMakeFiles\CMakeScratch\TryCompile-4s9w8e\CheckIncludeFile.c:1:20: fatal error: xinput.h: No such file or directory
+ #include <xinput.h>
+                    ^
+compilation terminated.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_c28d0.dir\build.make:77: CMakeFiles/cmTC_c28d0.dir/CheckIncludeFile.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/Programming/github_repo/cpp/gaussian_elemenination_calculator/CMakeFiles/CMakeScratch/TryCompile-4s9w8e'
+mingw32-make.exe: *** [Makefile:126: cmTC_c28d0/fast] Error 2
+
+
+

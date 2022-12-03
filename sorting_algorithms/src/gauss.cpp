@@ -15,14 +15,6 @@ int main()
     }
 
     int p, q;
-    printf("=>\n");
-    for(p=0; p<n; p++){
-        for(q=0; q<n+1; q++){
-            printf("%f\t", matrix[p][q]);
-        }
-        printf("\n");
-    }
-
     int k;
 
     for(k=0; k<n; k++){
