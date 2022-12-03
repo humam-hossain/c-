@@ -1,0 +1,6 @@
+[submodule "gaussian_elemenination_calculator/src/glfw"]
+	path = gaussian_elemenination_calculator/src/glfw
+	url = https://github.com/glfw/glfw
+[submodule "gaussian_elemenination_calculator/glfw"]
+	path = gaussian_elemenination_calculator/glfw
+	url = https://github.com/glfw/glfw
