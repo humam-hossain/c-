@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\gauss.dir/objects.a
-C:\MinGW\bin\ar.exe qc CMakeFiles\gauss.dir/objects.a @CMakeFiles\gauss.dir\objects1
-C:\MinGW\bin\c++.exe -Wl,--whole-archive CMakeFiles\gauss.dir/objects.a -Wl,--no-whole-archive -o gauss.exe -Wl,--out-implib,libgauss.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\gauss.dir\linkLibs.rsp
