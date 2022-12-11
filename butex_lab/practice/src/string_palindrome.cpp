@@ -2,9 +2,12 @@
 #include<string.h>
 #include<ctype.h>
 
+// Lamia
+// aimaL
+
 int is_palindrome(char str[])
 {
-    int i;    
+    int i;
     char temp[strlen(str)];
 
     strcpy(temp, str);

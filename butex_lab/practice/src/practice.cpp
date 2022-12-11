@@ -5,13 +5,13 @@ void convert_time(char time_12[], char time_24[])
 {
     strcpy(time_24, time_12);
 
-    if(time_24[5] == 'A' || time_24[5] == 'a'){
+    if(time_24[5] == 'A' || time_24[5] == 'a'){ //PM
         if(time_24[0] == '1' && time_24[1] == '2'){
             time_24[0] = '0';
             time_24[1] = '0';
         }
-    }else{
-        if(time_24[0] == '1'){
+    }else{ // PM
+        if(time_24[0] == '1'){ // 10, 11, 12
             if(time_24[1] == '0'){  // 10:XXPM -> 22:XX
                 time_24[0] = '2';
                 time_24[1] = '2';
@@ -19,7 +19,7 @@ void convert_time(char time_12[], char time_24[])
                 time_24[0] = '2';
                 time_24[1] = '3';
             }
-        }else{
+        }else{ // 01, 08, 09
             if(time_24[1] == '8'){ // 08:XXPM -> 20:XX
                 time_24[0] = '2';
                 time_24[1] = '0';
