@@ -42,57 +42,57 @@ int main()
 #include<stdio.h>
 #include<string.h>
 
-void convert_time(char time_12[], char time_24[])
+void convert_time(char time[])
 {
-    strcpy(time_24, time_12);
+    if(time[5] == 'A' || time[5] == 'a'){
+        // 12:00AM -> 00:00
+        // 01:00AM -> 01:00
 
-    if(time_24[5] == 'A' || time_24[5] == 'a'){
-        if(time_24[0] == '1' && time_24[1] == '2'){
-            time_24[0] = '0';
-            time_24[1] = '0';
+        if(time[0] == '1' && time[1] == '2'){ // 12
+            time[0] = '0';
+            time[1] = '0';
         }
     }else{
-        if(time_24[0] == '1'){
-            if(time_24[1] == '0'){  // 10:XXPM -> 22:XX
-                time_24[0] = '2';
-                time_24[1] = '2';
-            }else if(time_24[1] == '1'){ //11:XXPM -> 23:XX
-                time_24[0] = '2';
-                time_24[1] = '3';
+        if(time[0] == '1'){
+            if(time[1] == '0'){
+                // 10:00PM -> 22:00
+                time[0] = '2';
+                time[1] = '2';
+            }else if(time[0] == '1'){
+                // 11:00PM -> 23:00
+                time[0] = '2';
+                time[1] = '3';
             }
         }else{
-            if(time_24[1] == '8'){ // 08:XXPM -> 20:XX
-                time_24[0] = '2';
-                time_24[1] = '0';
-            }else if(time_24[1] == '9'){ // 09:XXPM -> 21:XX
-                time_24[0] = '2';
-                time_24[1] = '1';
-            }else{ //07:XXPM -> 19:XX
-                time_24[0] = '1';
-                time_24[1] = time_24[1] + 2;
+            // 09:00PM -> 21:00
+            if(time[1] == '9'){
+
             }
+            // 08:00PM -> 20:00
+
+            // 07:00PM -> 19:00
+            // 03:00PM -> 15:00
         }
+        // 12:00PM -> 12:00
     }
 
-    time_24[5] = '\0';
+    time[5] = '\0';
 }
 
 int main()
 {
     // 12:00AM -> 00:00
-    // 03:30PM -> 15:30
-    // 03:00AM -> 03:00
     // 12:00PM -> 12:00
-    // 08:00PM -> 20:00
+    // 03:00AM -> 03:00
+    // 03:00PM -> 15:00
 
-    char time_12[7];
-    char time_24[7];
+    char time[7];
 
-    scanf("%s", time_12);
+    scanf("%s", time);
 
-    convert_time(time_12, time_24);
+    convert_time(time);
 
-    printf("%s", time_24);
+    printf("%s", time);
 
     return 0;
 }
