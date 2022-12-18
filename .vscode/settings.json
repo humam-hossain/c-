@@ -2,6 +2,8 @@
     "files.associations": {
         "*.ejs": "html",
         "cstdio": "cpp",
-        "exception": "cpp"
+        "exception": "cpp",
+        "*.tcc": "cpp",
+        "ostream": "cpp"
     }
 }
