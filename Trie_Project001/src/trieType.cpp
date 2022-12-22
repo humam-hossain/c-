@@ -74,3 +74,44 @@ bool trieType::Node::startsWith(std::string prefix){
     // a proper prefix will return true
     return true;
 }
+
+bool trieEmpty(trieType::Node* root){
+    for(int i = 0 ; i < 26 ; i++){
+        if(root->next[i]){
+            return false;
+        }
+    }
+    return true;
+}
+
+trieType::Node* trieType::Node::trieDelete(std::string word, int height){
+    trieType::Node* root = this;
+
+    if(!root){
+        return NULL;
+    }
+
+    if(height == word.size()){
+
+        if(root->IsEndOfString){
+            root->IsEndOfString = false;
+        }
+
+        if(trieEmpty(root)){
+            delete (root);
+            root = NULL;
+        }
+        return root;
+    }
+
+    int index = word[height] - 'a';
+    root->next[index] = trieDelete(word, height + 1);
+
+    if(trieEmpty(root) && root->IsEndOfString == false){
+
+        delete(root);
+        root = NULL;
+    }
+    return root;
+}
+

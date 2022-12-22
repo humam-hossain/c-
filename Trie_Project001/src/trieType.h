@@ -46,6 +46,7 @@ public:
         void insert(std::string);
         bool search(std::string);
         bool startsWith(std::string);
+        trieType::Node* trieDelete(std::string, int height = 0);
     };
     Node* rootNode;
     trieType();

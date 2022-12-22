@@ -15,18 +15,26 @@ int main() {
         root->insert(words[i]);
 
     // searching prefix from trie object
-    if(root->startsWith("sede")){
+    if(root->startsWith("sad")){
+        cout << "true" << endl;
+    }else {
+        cout << "false" << endl;
+    }
+
+    root->trieDelete("sadeed");
+
+    if(root->startsWith("sadeed")){
         cout << "true" << endl;
     }else {
         cout << "false" << endl;
     }
     
     // searching values from trie object . . . .
-    if(root->search("SDSSA")){
-        cout << "yES" << endl;
-    }else{
-        cout << "No" << endl;
-    }
+    // if(root->search("SDSSA")){
+    //     cout << "yES" << endl;
+    // }else{
+    //     cout << "No" << endl;
+    // }
 
 
     return 0;

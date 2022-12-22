@@ -4,6 +4,7 @@
         "cstdio": "cpp",
         "exception": "cpp",
         "*.tcc": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cstdlib": "cpp"
     }
 }
