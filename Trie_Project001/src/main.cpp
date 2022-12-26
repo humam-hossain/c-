@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 
     // Created a array tester . . . . .
-    std::string words[] = {"riasat", "Abeer", "sadeed", "Pramanik"};
+    std::string words[] = {"riasat", "abeer", "sadeed", "pramanik"};
     int size = sizeof(words) / sizeof(words[0]);
 
     // Created trieType node . . . . . .
