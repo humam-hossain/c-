@@ -19,31 +19,6 @@ public:
     }
 
     bool operator > (timeStamp& other) {
-        if (this->hr < other.hr) {
-            return true;
-        }
-        else if (this->hr > other.hr) {
-            return false;
-        }
-        
-        // hours are equal
-        if (this->min < other.min) {
-            return true;
-        }
-        else if (this->min > other.min) {
-            return false;
-        }
-
-        // minutes are equal
-        if (this->sec < other.sec) {
-            return true;
-        }
-
-        // seconds are equal, so they are not greater than each other
-        return false;
-    }
-
-    bool operator < (timeStamp& other) {
         if (this->hr > other.hr) {
             return true;
         }
@@ -61,6 +36,31 @@ public:
 
         // minutes are equal
         if (this->sec > other.sec) {
+            return true;
+        }
+
+        // seconds are equal, so they are not greater than each other
+        return false;
+    }
+
+    bool operator < (timeStamp& other) {
+        if (this->hr < other.hr) {
+            return true;
+        }
+        else if (this->hr > other.hr) {
+            return false;
+        }
+        
+        // hours are equal
+        if (this->min < other.min) {
+            return true;
+        }
+        else if (this->min > other.min) {
+            return false;
+        }
+
+        // minutes are equal
+        if (this->sec < other.sec) {
             return true;
         }
 
