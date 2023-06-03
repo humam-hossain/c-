@@ -1,5 +1,3 @@
-Certainly! We can adapt the concept of using different data structures for a Car Rental Management system. Here's an outline of how various data structures can be applied:
-
 1. Array:
    - Use an array to represent the collection of cars available for rental. Each element of the array represents a car and stores information such as the car's ID, brand, model, and availability status.
    - Utilize an array to store information about the rental history of cars, including details such as the rental duration, customer information, and rental dates.
