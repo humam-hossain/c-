@@ -41,7 +41,7 @@ If you have any questions or confusion regarding the assignment, please email th
     // definition of function proc1 which takes an integer pointer, returns null
     void proc1(int *i)
     {
-        *i = 15;    // assign the value 15 to the variable pointed to by 'i' (i.e., 'a')
+        *i = 15;    // assign the value 15 to the variable pointed to by 'i'
     }
     
     // definition of function proc2 which takes an integer reference, returns null
